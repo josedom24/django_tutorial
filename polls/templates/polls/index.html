@@ -1,0 +1,22 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+<<<<<<< HEAD
+<title>Javier Crespillo Bergua</title>
+<h1>Javier Crespillo Bergua</h1>
+=======
+
+>>>>>>> bc6295723152e1e860cfa52200c992f903c3e498
+{% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+    <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+<<<<<<< HEAD
+{% endif %}
+=======
+{% endif %}
+>>>>>>> bc6295723152e1e860cfa52200c992f903c3e498
